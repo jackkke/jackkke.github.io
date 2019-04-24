@@ -98,7 +98,7 @@
 <meta name="keywords" content="开端,工具">
 <meta property="og:type" content="article">
 <meta property="og:title" content="优化NexT 6.0版本">
-<meta property="og:url" content="http://jackkke.github.io/2019/04/17/优化NexT-6-0版本/index.html">
+<meta property="og:url" content="http://jackkke.gitee.io/2019/04/17/优化NexT-6-0版本/index.html">
 <meta property="og:site_name" content="Just Do IT">
 <meta property="og:description" content="优化NexT 6.0，本文完全按照个人喜欢设置本文主要参考：链接，特别感谢 1. Schemes主题选择以下配置均在NexT主题配置文件：themes/next/_config.yml中 12345# Schemes# scheme: Musescheme: Mist# scheme: Pisces# scheme: Gemini 2. 取消文章不自动折叠首页文章不显示全部，折叠起来，防止文章过长">
 <meta property="og:locale" content="zh-CN">
@@ -113,7 +113,7 @@
 
   
   
-  <link rel="canonical" href="http://jackkke.github.io/2019/04/17/优化NexT-6-0版本/">
+  <link rel="canonical" href="http://jackkke.gitee.io/2019/04/17/优化NexT-6-0版本/">
 
 
 
@@ -396,7 +396,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://jackkke.github.io/2019/04/17/优化NexT-6-0版本/">
+    <link itemprop="mainEntityOfPage" href="http://jackkke.gitee.io/2019/04/17/优化NexT-6-0版本/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="jackkke">
@@ -552,7 +552,7 @@
 <h3 id="10-2-gitment"><a href="#10-2-gitment" class="headerlink" title="10.2 gitment"></a>10.2 gitment</h3><p>然后又发现了gitment，但他的问题比较多，比如issue名长度限制、第一次初始化也有很大问题，弄到一半弃用</p>
 <h3 id="10-3-gitalk"><a href="#10-3-gitalk" class="headerlink" title="10.3 gitalk"></a>10.3 gitalk</h3><p>最终采取的方案是gitalk，issue名限制问题也不存在。gitalk和gitment采取的解决方案相同，都是issue，这两个方案目前NexT都已经直接支持，需要先去注册一下OAuth<a href="https://github.com/settings/applications/new" target="_blank" rel="noopener">点我达</a>，记下Client ID和Client Secret。</p>
 <blockquote>
-<p>注意Authorization callback URL填自己的网站url： <a href="https://jackkke.github.io/">https://jackkke.github.io/</a></p>
+<p>注意Authorization callback URL填自己的网站url： <a href="https://jackkke.github.io/" target="_blank" rel="noopener">https://jackkke.github.io/</a></p>
 </blockquote>
 <figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">gitalk:</span><br><span class="line">  enable: true <span class="comment"># 这个地方改为true</span></span><br><span class="line">  github_id: 你的github名</span><br><span class="line">  repo: 专门存储评论系统的资源库，或者本项目资源库亦可</span><br><span class="line">  client_id: 你的oauth ID</span><br><span class="line">  client_secret: 你的oauth 密码</span><br><span class="line">  admin_user: 管理员的github name，可以是多个[<span class="string">'name1'</span>, <span class="string">'name2'</span>],必须要设置，需要管理员来初始化评论</span><br><span class="line">  distraction_free_mode: true </span><br><span class="line">  language:</span><br></pre></td></tr></table></figure>
 <h2 id="11-添加站点与文章访问计数"><a href="#11-添加站点与文章访问计数" class="headerlink" title="11. 添加站点与文章访问计数"></a>11. 添加站点与文章访问计数</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">busuanzi_count:</span><br><span class="line">  enable: true # 将此改为true，开放计数功能</span><br><span class="line">  total_visitors: true</span><br><span class="line">  total_visitors_icon: user</span><br><span class="line">  total_views: true</span><br><span class="line">  total_views_icon: eye</span><br><span class="line">  post_views: true</span><br><span class="line">  post_views_icon: eye</span><br></pre></td></tr></table></figure>
@@ -1015,8 +1015,8 @@
 
 <script>
   var gitalk = new Gitalk({
-    clientID: 'a687777f02ec551a31dc',
-    clientSecret: '9527bc4b4ffd82f68ac93429319d689d62003a32',
+    clientID: '54f3a1fd3d7ae78c2d41',
+    clientSecret: '8540cf736bc363775087a306d073a3286119b81a',
     repo: 'gitPagesTalk',
     owner: 'jackkke',
     admin: ['jackkke'],
