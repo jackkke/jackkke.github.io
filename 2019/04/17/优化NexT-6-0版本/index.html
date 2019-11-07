@@ -1,125 +1,78 @@
 <!DOCTYPE html>
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-<html class="theme-next mist use-motion" lang="zh-CN">
-<head><meta name="generator" content="Hexo 3.8.0">
+<html lang="zh-CN">
+<head>
   <meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.0.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/jackkke.jpg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/jackkke.jpg">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/jackkke.jpg">
+  <link rel="mask-icon" href="/images/jackkke.jpg" color="#222">
+  <link rel="alternate" href="/atom.xml" title="Just Do IT" type="application/atom+xml">
+
+<link rel="stylesheet" href="/css/main.css">
 
 
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
-
-<link rel="stylesheet" href="/css/main.css?v=7.1.0">
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/jackkke.jpg?v=7.1.0">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/jackkke.jpg?v=7.1.0">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/jackkke.jpg?v=7.1.0">
-
-
-
-
-
-
-
-
-<script id="hexo.configurations">
+<script id="hexo-configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Mist',
-    version: '7.1.0',
-    sidebar: {"position":"left","display":"hide","offset":12,"onmobile":false,"dimmer":false},
-    back2top: true,
-    back2top_sidebar: false,
+    scheme: 'Gemini',
+    version: '7.5.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"hide","offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
     fancybox: false,
-    fastclick: false,
+    mediumzoom: false,
     lazyload: false,
-    tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    pangu: false,
     algolia: {
-      applicationID: '',
+      appID: '',
       apiKey: '',
       indexName: '',
       hits: {"per_page":10},
       labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":true},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    },
+    sidebarPadding: 40
   };
 </script>
 
-
-  
-
-
-
-
-  <meta name="description" content="优化NexT 6.0，本文完全按照个人喜欢设置本文主要参考：链接，特别感谢 1. Schemes主题选择以下配置均在NexT主题配置文件：themes/next/_config.yml中 12345# Schemes# scheme: Musescheme: Mist# scheme: Pisces# scheme: Gemini 2. 取消文章不自动折叠首页文章不显示全部，折叠起来，防止文章过长">
+  <meta name="description" content="优化NexT 6.0，本文完全按照个人喜欢设置本文主要参考：链接，特别感谢1. Schemes主题选择以下配置均在NexT主题配置文件：themes&#x2F;next&#x2F;_config.yml中">
 <meta name="keywords" content="工具,开端">
 <meta property="og:type" content="article">
 <meta property="og:title" content="优化NexT 6.0版本">
-<meta property="og:url" content="http://jackkke.github.io/2019/04/17/优化NexT-6-0版本/index.html">
+<meta property="og:url" content="http:&#x2F;&#x2F;jackkke.github.io&#x2F;2019&#x2F;04&#x2F;17&#x2F;%E4%BC%98%E5%8C%96NexT-6-0%E7%89%88%E6%9C%AC&#x2F;index.html">
 <meta property="og:site_name" content="Just Do IT">
-<meta property="og:description" content="优化NexT 6.0，本文完全按照个人喜欢设置本文主要参考：链接，特别感谢 1. Schemes主题选择以下配置均在NexT主题配置文件：themes/next/_config.yml中 12345# Schemes# scheme: Musescheme: Mist# scheme: Pisces# scheme: Gemini 2. 取消文章不自动折叠首页文章不显示全部，折叠起来，防止文章过长">
+<meta property="og:description" content="优化NexT 6.0，本文完全按照个人喜欢设置本文主要参考：链接，特别感谢1. Schemes主题选择以下配置均在NexT主题配置文件：themes&#x2F;next&#x2F;_config.yml中">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-11-01T07:25:52.479Z">
+<meta property="og:updated_time" content="2019-11-06T09:44:38.007Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="优化NexT 6.0版本">
-<meta name="twitter:description" content="优化NexT 6.0，本文完全按照个人喜欢设置本文主要参考：链接，特别感谢 1. Schemes主题选择以下配置均在NexT主题配置文件：themes/next/_config.yml中 12345# Schemes# scheme: Musescheme: Mist# scheme: Pisces# scheme: Gemini 2. 取消文章不自动折叠首页文章不显示全部，折叠起来，防止文章过长">
+
+<link rel="canonical" href="http://jackkke.github.io/2019/04/17/%E4%BC%98%E5%8C%96NexT-6-0%E7%89%88%E6%9C%AC/">
 
 
-
-
-
-  
-  
-  <link rel="canonical" href="http://jackkke.github.io/2019/04/17/优化NexT-6-0版本/">
-
-
-
-<script id="page.configurations">
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
   };
 </script>
 
@@ -131,15 +84,8 @@
 
 
 
-
-
-
-
-
-
   <noscript>
   <style>
-  .use-motion .motion-element,
   .use-motion .brand,
   .use-motion .menu-item,
   .sidebar-inner,
@@ -148,9 +94,8 @@
   .use-motion .comments,
   .use-motion .post-header,
   .use-motion .post-body,
-  .use-motion .collection-title { opacity: initial; }
+  .use-motion .collection-header { opacity: initial; }
 
-  .use-motion .logo,
   .use-motion .site-title,
   .use-motion .site-subtitle {
     opacity: initial;
@@ -164,296 +109,165 @@
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
-
-  
-  
-    
-  
-
-  <div class="container sidebar-position-left page-post-detail">
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
   <div class="site-meta">
-    
 
-    <div class="custom-logo-site-title">
+    <div>
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">Just Do IT</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
-    
-      
         <p class="site-subtitle">开心写代码</p>
-      
-    
-    
   </div>
 
   <div class="site-nav-toggle">
-    <button aria-label="切换导航栏">
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
   </div>
 </div>
-
 
 
 <nav class="site-nav">
   
-    <ul id="menu" class="menu">
-      
-        
-        
-        
-          
-          <li class="menu-item menu-item-home">
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
 
-    
-    
-    
-      
-    
-
-    
-
-    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
 
   </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-tags">
+        <li class="menu-item menu-item-tags">
 
-    
-    
-    
-      
-    
-
-    
-
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
 
   </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-commonweal">
+        <li class="menu-item menu-item-archives">
 
-    
-    
-    
-      
-    
-
-    
-
-    <a href="/404/" rel="section"><i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br>早点回家</a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
 
   </li>
+        <li class="menu-item menu-item-commonweal">
 
-      
-      
-        <li class="menu-item menu-item-search">
-          
-            <a href="javascript:;" class="popup-trigger">
-          
-            
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
-        </li>
-      
-    </ul>
-  
+    <a href="/404/" rel="section"><i class="fa fa-fw fa-heartbeat"></i>早点回家</a>
 
-  
-    
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
 
-  
-
-  
-    <div class="site-search">
-      
-  <div class="popup search-popup local-search-popup">
-  <div class="local-search-header clearfix">
-    <span class="search-icon">
-      <i class="fa fa-search"></i>
-    </span>
-    <span class="popup-btn-close">
-      <i class="fa fa-times-circle"></i>
-    </span>
-    <div class="local-search-input-wrapper">
-      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
-    </div>
-  </div>
-  <div id="local-search-result"></div>
-</div>
-
-
-
-    </div>
-  
 </nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
 
+</div>
+<div class="search-pop-overlay"></div>
 
-
-  
-
-
-
+  </div>
 </div>
     </header>
 
     
-  
-  
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
 
-  
-
-  <a href="https://github.com/jackkke" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewbox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a>
+  <a href="https://github.com/jackkke" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
 
 
-
-    <main id="main" class="main">
+    <main class="main">
       <div class="main-inner">
         <div class="content-wrap">
           
-          <div id="content" class="content">
+
+          <div class="content">
             
 
-  <div id="posts" class="posts-expand">
-    
-
-  
-
+  <div class="posts-expand">
+      
   
   
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://jackkke.github.io/2019/04/17/优化NexT-6-0版本/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://jackkke.github.io/2019/04/17/%E4%BC%98%E5%8C%96NexT-6-0%E7%89%88%E6%9C%AC/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/jackkke.jpg">
       <meta itemprop="name" content="jackkke">
       <meta itemprop="description" content="爱编码、爱做饭、爱你">
-      <meta itemprop="image" content="/images/jackkke.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Just Do IT">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">优化NexT 6.0版本
-
-              
-            
-          </h1>
-        
+        <h1 class="post-title" itemprop="name headline">
+          优化NexT 6.0版本
+        </h1>
 
         <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
+              <span class="post-meta-item-text">发表于</span>
 
               <time title="创建时间：2019-04-17 16:11:52" itemprop="dateCreated datePublished" datetime="2019-04-17T16:11:52+08:00">2019-04-17</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
+            </span>
+              <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-11-01 15:25:52" itemprop="dateModified" datetime="2019-11-01T15:25:52+08:00">2019-11-01</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-11-06 17:44:38" itemprop="dateModified" datetime="2019-11-06T17:44:38+08:00">2019-11-06</time>
+              </span>
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/工具/" itemprop="url" rel="index"><span itemprop="name">工具</span></a></span>
-
-                
-                
-              
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%B7%A5%E5%85%B7/" itemprop="url" rel="index">
+                    <span itemprop="name">工具</span>
+                  </a>
+                </span>
             </span>
-          
 
           
-            
-            
-          
-
-          
-          
-
-          
-            <span class="post-meta-divider">|</span>
-            <span class="post-meta-item-icon">
-            <i class="fa fa-eye"></i>
-             阅读次数： 
-            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
             </span>
-          
-
-          
-
-          
 
         </div>
       </header>
-    
 
     
     
@@ -461,393 +275,259 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
+        <h1 id="优化NexT-6-0，本文完全按照个人喜欢设置"><a href="#优化NexT-6-0，本文完全按照个人喜欢设置" class="headerlink" title="优化NexT 6.0，本文完全按照个人喜欢设置"></a>优化NexT 6.0，本文完全按照个人喜欢设置</h1><p>本文主要参考：<a href="https://www.jianshu.com/p/3a05351a37dc" target="_blank" rel="noopener">链接</a>，特别感谢</p><h2 id="1-Schemes主题选择"><a href="#1-Schemes主题选择" class="headerlink" title="1. Schemes主题选择"></a>1. Schemes主题选择</h2><p>以下配置均在NexT主题配置文件：<strong>themes/next/_config.yml</strong>中</p><a id="more"></a>
 
-      
-        <h1 id="优化NexT-6-0，本文完全按照个人喜欢设置"><a href="#优化NexT-6-0，本文完全按照个人喜欢设置" class="headerlink" title="优化NexT 6.0，本文完全按照个人喜欢设置"></a>优化NexT 6.0，本文完全按照个人喜欢设置</h1><p>本文主要参考：<a href="https://www.jianshu.com/p/3a05351a37dc" target="_blank" rel="noopener">链接</a>，特别感谢</p>
-<h2 id="1-Schemes主题选择"><a href="#1-Schemes主题选择" class="headerlink" title="1. Schemes主题选择"></a>1. Schemes主题选择</h2><p>以下配置均在NexT主题配置文件：<strong>themes/next/_config.yml</strong>中</p>
-<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Schemes</span></span><br><span class="line"><span class="comment"># scheme: Muse</span></span><br><span class="line">scheme: Mist</span><br><span class="line"><span class="comment"># scheme: Pisces</span></span><br><span class="line"><span class="comment"># scheme: Gemini</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Schemes</span></span><br><span class="line"><span class="comment"># scheme: Muse</span></span><br><span class="line"><span class="comment"># scheme: Mist</span></span><br><span class="line"><span class="comment"># scheme: Pisces</span></span><br><span class="line">scheme: Gemini</span><br></pre></td></tr></table></figure>
+
 <h2 id="2-取消文章不自动折叠"><a href="#2-取消文章不自动折叠" class="headerlink" title="2. 取消文章不自动折叠"></a>2. 取消文章不自动折叠</h2><p>首页文章不显示全部，折叠起来，防止文章过长影响阅读</p>
 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">auto_excerpt:</span><br><span class="line">  enable: <span class="keyword">true</span> <span class="comment">#此处改为true，意为自动折叠，length为折叠的长度</span></span><br><span class="line">  length: <span class="number">150</span></span><br></pre></td></tr></table></figure>
+
 <p>或者采取另一种方案，在文章中间插入一句，即可实现随意折叠，且优先级高于上面的方案，可以两者共同使用</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--more--&gt;</span><br></pre></td></tr></table></figure>
+
 <h2 id="3-取消目录自动显示"><a href="#3-取消目录自动显示" class="headerlink" title="3. 取消目录自动显示"></a>3. 取消目录自动显示</h2><p>文章默认会展开右侧目录如果存在的话，我不太喜欢，隐藏掉</p>
 <figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">sidebar:</span><br><span class="line">  <span class="comment">#  - post    默认值，如果有目录自动展开，可隐藏</span></span><br><span class="line">  <span class="comment">#  - always  总是存在，不可隐藏</span></span><br><span class="line">  <span class="comment">#  - hide    默认隐藏，可以展开（采用这种）</span></span><br><span class="line">  <span class="comment">#  - remove  移除</span></span><br><span class="line">  display: hide</span><br></pre></td></tr></table></figure>
+
 <h2 id="4-去掉文章目录标题的自动编号"><a href="#4-去掉文章目录标题的自动编号" class="headerlink" title="4. 去掉文章目录标题的自动编号"></a>4. 去掉文章目录标题的自动编号</h2><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">toc:</span><br><span class="line">  enable: true</span><br><span class="line">  number: false <span class="comment"># 将此改为false即可</span></span><br><span class="line">  wrap: true <span class="comment"># 将此改为true每行目录超长自动换行</span></span><br><span class="line">  expand_all: false</span><br><span class="line">  max_depth: <span class="number">6</span></span><br></pre></td></tr></table></figure>
+
 <h2 id="5-设置网站缩略图标"><a href="#5-设置网站缩略图标" class="headerlink" title="5. 设置网站缩略图标"></a>5. 设置网站缩略图标</h2><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">favicon:</span><br><span class="line">  small: /images/jackkke.jpg</span><br><span class="line">  medium: /images/jackkke.jpg</span><br><span class="line">  apple_touch_icon: /images/jackkke.jpg</span><br><span class="line">  <span class="comment"># safari_pinned_tab: /images/logo.svg</span></span><br><span class="line">  <span class="comment">#android_manifest: /images/manifest.json</span></span><br><span class="line">  <span class="comment">#ms_browserconfig: /images/browserconfig.xml</span></span><br></pre></td></tr></table></figure>
+
 <h2 id="6-设置头像"><a href="#6-设置头像" class="headerlink" title="6. 设置头像"></a>6. 设置头像</h2><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">avatar:</span><br><span class="line">  url: /images/jackkke.jpg <span class="comment"># 需要把jackkke.jpg放到themes/next/source/images下</span></span><br><span class="line">  rounded: <span class="keyword">false</span></span><br><span class="line">  opacity: <span class="number">1</span></span><br><span class="line">  rotated: <span class="keyword">false</span></span><br></pre></td></tr></table></figure>
+
 <h2 id="7-Github-follow-me-图标"><a href="#7-Github-follow-me-图标" class="headerlink" title="7. Github follow me 图标"></a>7. Github follow me 图标</h2><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">github_banner:</span><br><span class="line">  enable: <span class="keyword">true</span> <span class="comment"># 将此改为true，即可显示在右上角</span></span><br><span class="line">  permalink: https:<span class="comment">//github.com/jackkke</span></span><br><span class="line">  title: Follow me on GitHub</span><br></pre></td></tr></table></figure>
+
 <h2 id="8-打赏功能"><a href="#8-打赏功能" class="headerlink" title="8. 打赏功能"></a>8. 打赏功能</h2><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">reward_settings:</span><br><span class="line">  enable: true <span class="comment"># 将此改成true，即可出现打赏按钮</span></span><br><span class="line">  animation: false</span><br><span class="line">  comment: 坚持原创技术分享，您的支持将鼓励我继续创作！</span><br><span class="line">reward:</span><br><span class="line">  wechatpay: /images/wechatpay.jpg <span class="comment"># 此处去掉注释，并将你自己的收款码放到图片文件夹即可看到效果</span></span><br><span class="line">  <span class="comment"># alipay: /images/alipay.png</span></span><br><span class="line">  <span class="comment">#bitcoin: /images/bitcoin.png</span></span><br></pre></td></tr></table></figure>
+
 <h2 id="9-丰富首页"><a href="#9-丰富首页" class="headerlink" title="9. 丰富首页"></a>9. 丰富首页</h2><h3 id="9-1-选择你需要的功能"><a href="#9-1-选择你需要的功能" class="headerlink" title="9.1 选择你需要的功能"></a>9.1 选择你需要的功能</h3><p>放开注释，该功能即可使用，键值对的值双竖线前面的代表功能名称，也就是访问路径，后面代表图标名称，默认即可</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: / || home                          //首页</span><br><span class="line">  archives: /archives/ || archive          //归档</span><br><span class="line">  categories: /categories/ || th           //分类</span><br><span class="line">  tags: /tags/ || tags                     //标签</span><br><span class="line">  about: /about/ || user                   //关于</span><br><span class="line">  <span class="comment"># schedule: /schedule/ || calendar        //日程表</span></span><br><span class="line">  <span class="comment"># sitemap: /sitemap.xml || sitemap        //站点地图</span></span><br><span class="line">  commonweal: /404/ || heartbeat          //公益404</span><br></pre></td></tr></table></figure>
+
 <h3 id="9-2-分类功能"><a href="#9-2-分类功能" class="headerlink" title="9.2 分类功能"></a>9.2 分类功能</h3><blockquote>
 <p>使用方法为在文章首title代码块处加上[categories: 分类名]即可</p>
 </blockquote>
 <figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 控制台执行该命令（下同）</span></span><br><span class="line">hexo new page categories</span><br><span class="line">生成的页面中加上</span><br><span class="line">type: <span class="string">"categories"</span></span><br></pre></td></tr></table></figure>
+
 <h3 id="9-3-标签功能"><a href="#9-3-标签功能" class="headerlink" title="9.3 标签功能"></a>9.3 标签功能</h3><blockquote>
 <p>使用方法为在文章首title代码块处加上[tags: 标签名]即可</p>
 </blockquote>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page tags</span><br></pre></td></tr></table></figure>
+
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 多tags也可以，方法为：</span><br><span class="line">tags:</span><br><span class="line">  - 标签1</span><br><span class="line">  - 标签2</span><br><span class="line">  ...</span><br></pre></td></tr></table></figure>
+
 <h3 id="9-4-关于页面"><a href="#9-4-关于页面" class="headerlink" title="9.4 关于页面"></a>9.4 关于页面</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page about</span><br></pre></td></tr></table></figure>
+
 <h3 id="9-5-本地搜索"><a href="#9-5-本地搜索" class="headerlink" title="9.5 本地搜索"></a>9.5 本地搜索</h3><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 先执行，下面这行代码，增加依赖</span></span><br><span class="line">npm install hexo-generator-searchdb --save</span><br><span class="line"><span class="comment">#然后修改配置文件</span></span><br><span class="line">local_search:</span><br><span class="line">  enable: true <span class="comment"># 此处改为true，增加本地搜索功能</span></span><br><span class="line">  trigger: auto</span><br><span class="line">  top_n_per_article: <span class="number">1</span></span><br></pre></td></tr></table></figure>
+
 <h3 id="9-6-404页面"><a href="#9-6-404页面" class="headerlink" title="9.6 404页面"></a>9.6 404页面</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page 404</span><br></pre></td></tr></table></figure>
+
 <p>在自动生成的页面后追加以下内容</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>早点回家<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"//qzonestyle.gtimg.cn/qzone/hybrid/app/404/search_children.js"</span> <span class="attr">homePageName</span>=<span class="string">"返回首页"</span> <span class="attr">homePageUrl</span>=<span class="string">"https://jackkke.github.io"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
 <h3 id="9-7-草稿"><a href="#9-7-草稿" class="headerlink" title="9.7 草稿"></a>9.7 草稿</h3><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 执行下面命令，生成名为“草稿.md”的草稿在/source/_drafts文件夹下</span></span><br><span class="line">hexo new draft <span class="string">"草稿"</span></span><br><span class="line"><span class="comment"># 执行下面命令，直接把草稿“草稿.md”发布，也可以手动把_drafts文件夹下的*.md文件移到_posts下</span></span><br><span class="line">hexo publish <span class="string">"草稿"</span></span><br></pre></td></tr></table></figure>
+
 <figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 如果想在测试环境查看草稿，可以修改hexo配置文件</span></span><br><span class="line">render_drafts: true</span><br><span class="line"><span class="comment"># 或者使用以下启动命令来启动项目</span></span><br><span class="line">hexo server --drafts</span><br></pre></td></tr></table></figure>
+
 <h2 id="10-增加评论功能"><a href="#10-增加评论功能" class="headerlink" title="10. 增加评论功能"></a>10. 增加评论功能</h2><h3 id="10-1-LiveRe"><a href="#10-1-LiveRe" class="headerlink" title="10.1 LiveRe"></a>10.1 LiveRe</h3><p>我首先采用的是LiveRe，参考链接：<a href="https://blog.csdn.net/weixin_41196185/article/details/79178780" target="_blank" rel="noopener">点我达</a>，但这个评论系统初始化超级慢，被弃用</p>
 <figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># LiveRe comments system</span></span><br><span class="line"><span class="comment"># You can get your uid from https://livere.com/insight/myCode (General web site)</span></span><br><span class="line">livere_uid: 注册成功登陆后找到data-uid，将其填到这个地方即可</span><br></pre></td></tr></table></figure>
+
 <h3 id="10-2-gitment"><a href="#10-2-gitment" class="headerlink" title="10.2 gitment"></a>10.2 gitment</h3><p>然后又发现了gitment，但他的问题比较多，比如issue名长度限制、第一次初始化也有很大问题，弄到一半弃用</p>
 <h3 id="10-3-gitalk"><a href="#10-3-gitalk" class="headerlink" title="10.3 gitalk"></a>10.3 gitalk</h3><p>最终采取的方案是gitalk，issue名限制问题也不存在。gitalk和gitment采取的解决方案相同，都是issue，这两个方案目前NexT都已经直接支持，需要先去注册一下OAuth<a href="https://github.com/settings/applications/new" target="_blank" rel="noopener">点我达</a>，记下Client ID和Client Secret。</p>
 <blockquote>
 <p>注意Authorization callback URL填自己的网站url： <a href="https://jackkke.github.io/">https://jackkke.github.io/</a></p>
 </blockquote>
 <figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">gitalk:</span><br><span class="line">  enable: true <span class="comment"># 这个地方改为true</span></span><br><span class="line">  github_id: 你的github名</span><br><span class="line">  repo: 专门存储评论系统的资源库，或者本项目资源库亦可</span><br><span class="line">  client_id: 你的oauth ID</span><br><span class="line">  client_secret: 你的oauth 密码</span><br><span class="line">  admin_user: 管理员的github name，可以是多个[<span class="string">'name1'</span>, <span class="string">'name2'</span>],必须要设置，需要管理员来初始化评论</span><br><span class="line">  distraction_free_mode: true </span><br><span class="line">  language:</span><br></pre></td></tr></table></figure>
+
 <h2 id="11-添加站点与文章访问计数"><a href="#11-添加站点与文章访问计数" class="headerlink" title="11. 添加站点与文章访问计数"></a>11. 添加站点与文章访问计数</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">busuanzi_count:</span><br><span class="line">  enable: true # 将此改为true，开放计数功能</span><br><span class="line">  total_visitors: true</span><br><span class="line">  total_visitors_icon: user</span><br><span class="line">  total_views: true</span><br><span class="line">  total_views_icon: eye</span><br><span class="line">  post_views: true</span><br><span class="line">  post_views_icon: eye</span><br></pre></td></tr></table></figure>
+
 <p>底部计数只有图标，没有文字，打开themes/next/layout/_third-party/analytics/busuanzi-counter.swig</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;i class=&quot;fa fa-&#123;&#123; theme.busuanzi_count.total_visitors_icon &#125;&#125;&quot;&gt;&lt;/i&gt;</span><br><span class="line"></span><br><span class="line"># 增加 &#123;&#123; __(&apos;footer.total_visitors&apos;) &#125;&#125;更改为</span><br><span class="line"></span><br><span class="line">&lt;i class=&quot;fa fa-&#123;&#123; theme.busuanzi_count.total_visitors_icon &#125;&#125;&quot;&gt; &#123;&#123; __(&apos;footer.total_visitors&apos;) &#125;&#125;&lt;/i&gt;</span><br></pre></td></tr></table></figure>
+
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;i class=&quot;fa fa-&#123;&#123; theme.busuanzi_count.total_views_icon &#125;&#125;&quot;&gt;&lt;/i&gt;</span><br><span class="line"></span><br><span class="line"># 增加 &#123;&#123; __(&apos;footer.total_views&apos;) &#125;&#125;更改为</span><br><span class="line"></span><br><span class="line">&lt;i class=&quot;fa fa-&#123;&#123; theme.busuanzi_count.total_views_icon &#125;&#125;&quot;&gt; &#123;&#123; __(&apos;footer.total_views&apos;) &#125;&#125;&lt;/i&gt;</span><br></pre></td></tr></table></figure>
+
 <h2 id="12-隐藏版本信息"><a href="#12-隐藏版本信息" class="headerlink" title="12. 隐藏版本信息"></a>12. 隐藏版本信息</h2><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">powered:</span><br><span class="line">  enable: false <span class="comment"># 此处改为false，隐藏hexo信息</span></span><br><span class="line">  version: false <span class="comment"># 只将此处改为false，只隐藏版本信息</span></span><br><span class="line"></span><br><span class="line">theme:</span><br><span class="line">  enable: false <span class="comment"># 此处改为false，隐藏next scheme信息</span></span><br><span class="line">  version: false <span class="comment"># 只将此处改为false，只隐藏版本信息</span></span><br></pre></td></tr></table></figure>
-      
+
+<h2 id="post-edit"><a href="#post-edit" class="headerlink" title="post_edit"></a>post_edit</h2>
     </div>
 
     
-
     
-    
-    
-
-    
-
     
       
-    
-    
-      <div>
-        <div id="reward-container">
+        <div class="reward-container">
   <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
-  <button id="reward-button" disable="enable" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+  <button disable="enable" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
     打赏
   </button>
   <div id="qr" style="display: none;">
-
-    
       
-      
-        
-      
-      <div style="display: inline-block">
+      <div style="display: inline-block;">
         <img src="/images/wechatpay.jpg" alt="jackkke 微信支付">
         <p>微信支付</p>
       </div>
-    
 
   </div>
 </div>
 
-      </div>
-    
 
-    
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/工具/" rel="tag"># 工具</a>
-          
-            <a href="/tags/开端/" rel="tag"># 开端</a>
-          
-        </div>
-      
-
-      
-      
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2019/04/17/第一篇博客/" rel="next" title="Hexo + GitHub Pages搭建博客">
-                <i class="fa fa-chevron-left"></i> Hexo + GitHub Pages搭建博客
-              </a>
-            
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E5%B7%A5%E5%85%B7/" rel="tag"># 工具</a>
+              <a href="/tags/%E5%BC%80%E7%AB%AF/" rel="tag"># 开端</a>
           </div>
 
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/04/23/Hexo 部署到github或gitee/" rel="prev" title="Hexo 部署到github或gitee">
-                Hexo 部署到github或gitee <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-  </div>
-
-
-          </div>
-          
-
-  
-    <div class="comments" id="gitalk-container">
-    </div>
-
-  
-
-
-
-        </div>
         
-          
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+                <a href="/2019/04/17/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" rel="next" title="Hexo + GitHub Pages搭建博客">
+                  <i class="fa fa-chevron-left"></i> Hexo + GitHub Pages搭建博客
+                </a>
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+                <a href="/2019/04/23/Hexo%20%E9%83%A8%E7%BD%B2%E5%88%B0github%E6%88%96gitee/" rel="prev" title="Hexo 部署到github或gitee">
+                  Hexo 部署到github或gitee <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+      </footer>
+    
+  </article>
   
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
+  
+  
+
   </div>
 
-  <aside id="sidebar" class="sidebar">
+
+          </div>
+          
+    <div class="comments" id="gitalk-container"></div>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
     <div class="sidebar-inner">
 
-      
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
 
-      
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#优化NexT-6-0，本文完全按照个人喜欢设置"><span class="nav-text">优化NexT 6.0，本文完全按照个人喜欢设置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Schemes主题选择"><span class="nav-text">1. Schemes主题选择</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-取消文章不自动折叠"><span class="nav-text">2. 取消文章不自动折叠</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-取消目录自动显示"><span class="nav-text">3. 取消目录自动显示</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-去掉文章目录标题的自动编号"><span class="nav-text">4. 去掉文章目录标题的自动编号</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-设置网站缩略图标"><span class="nav-text">5. 设置网站缩略图标</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-设置头像"><span class="nav-text">6. 设置头像</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-Github-follow-me-图标"><span class="nav-text">7. Github follow me 图标</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-打赏功能"><span class="nav-text">8. 打赏功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-丰富首页"><span class="nav-text">9. 丰富首页</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#9-1-选择你需要的功能"><span class="nav-text">9.1 选择你需要的功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-2-分类功能"><span class="nav-text">9.2 分类功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-3-标签功能"><span class="nav-text">9.3 标签功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-4-关于页面"><span class="nav-text">9.4 关于页面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-5-本地搜索"><span class="nav-text">9.5 本地搜索</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-6-404页面"><span class="nav-text">9.6 404页面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-7-草稿"><span class="nav-text">9.7 草稿</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-增加评论功能"><span class="nav-text">10. 增加评论功能</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#10-1-LiveRe"><span class="nav-text">10.1 LiveRe</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-2-gitment"><span class="nav-text">10.2 gitment</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-3-gitalk"><span class="nav-text">10.3 gitalk</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#11-添加站点与文章访问计数"><span class="nav-text">11. 添加站点与文章访问计数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#12-隐藏版本信息"><span class="nav-text">12. 隐藏版本信息</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#post-edit"><span class="nav-text">post_edit</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
 
       <div class="site-overview-wrap sidebar-panel">
-        <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-            
-              <img class="site-author-image" itemprop="image" src="/images/jackkke.jpg" alt="jackkke">
-            
-              <p class="site-author-name" itemprop="name">jackkke</p>
-              <div class="site-description motion-element" itemprop="description">爱编码、爱做饭、爱你</div>
-          </div>
-
-          
-            <nav class="site-state motion-element">
-              
-                <div class="site-state-item site-state-posts">
-                
-                  <a href="/archives">
-                
-                    <span class="site-state-item-count">11</span>
-                    <span class="site-state-item-name">日志</span>
-                  </a>
-                </div>
-              
-
-              
-                
-                
-                <div class="site-state-item site-state-categories">
-                  
-                    
-                      <a href="/categories/">
-                    
-                  
-                    
-                    
-                      
-                    
-                    <span class="site-state-item-count">1</span>
-                    <span class="site-state-item-name">分类</span>
-                  </a>
-                </div>
-              
-
-              
-                
-                
-                <div class="site-state-item site-state-tags">
-                  
-                    
-                      <a href="/tags/">
-                    
-                  
-                    
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">7</span>
-                    <span class="site-state-item-name">标签</span>
-                  </a>
-                </div>
-              
-            </nav>
-          
-
-          
-
-          
-
-          
-            <div class="links-of-author motion-element">
-              
-                <span class="links-of-author-item">
-                  
-                  
-                    
-                  
-                  
-                    
-                  
-                  <a href="https://github.com/jackkke" title="GitHub &rarr; https://github.com/jackkke" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
-                </span>
-              
-                <span class="links-of-author-item">
-                  
-                  
-                    
-                  
-                  
-                    
-                  
-                  <a href="mailto:hangao1204@hotmail.com" title="E-Mail &rarr; mailto:hangao1204@hotmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
-                </span>
-              
-                <span class="links-of-author-item">
-                  
-                  
-                    
-                  
-                  
-                    
-                  
-                  <a href="https://weibo.com/hangao0716" title="Weibo &rarr; https://weibo.com/hangao0716" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i>Weibo</a>
-                </span>
-              
-            </div>
-          
-
-          
-
-          
-          
-
-          
-            
-          
-          
-
-        </div>
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="site-author-image" itemprop="image" alt="jackkke"
+    src="/images/jackkke.jpg">
+  <p class="site-author-name" itemprop="name">jackkke</p>
+  <div class="site-description" itemprop="description">爱编码、爱做饭、爱你</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">11</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
       </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="feed-link motion-element">
+    <a href="/atom.xml" rel="alternate">
+      <i class="fa fa-rss"></i>RSS
+    </a>
+  </div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/jackkke" title="GitHub &rarr; https://github.com/jackkke" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/mailto:hangao1204@hotmail.com" title="E-Mail &rarr; mailto:hangao1204@hotmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/hangao0716" title="Weibo &rarr; https://weibo.com/hangao0716" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i>Weibo</a>
+      </span>
+  </div>
 
-      
-      <!--noindex-->
-        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
 
-            
-            
-            
-            
 
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#优化NexT-6-0，本文完全按照个人喜欢设置"><span class="nav-text">优化NexT 6.0，本文完全按照个人喜欢设置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Schemes主题选择"><span class="nav-text">1. Schemes主题选择</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-取消文章不自动折叠"><span class="nav-text">2. 取消文章不自动折叠</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-取消目录自动显示"><span class="nav-text">3. 取消目录自动显示</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-去掉文章目录标题的自动编号"><span class="nav-text">4. 去掉文章目录标题的自动编号</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-设置网站缩略图标"><span class="nav-text">5. 设置网站缩略图标</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-设置头像"><span class="nav-text">6. 设置头像</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-Github-follow-me-图标"><span class="nav-text">7. Github follow me 图标</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-打赏功能"><span class="nav-text">8. 打赏功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-丰富首页"><span class="nav-text">9. 丰富首页</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#9-1-选择你需要的功能"><span class="nav-text">9.1 选择你需要的功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-2-分类功能"><span class="nav-text">9.2 分类功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-3-标签功能"><span class="nav-text">9.3 标签功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-4-关于页面"><span class="nav-text">9.4 关于页面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-5-本地搜索"><span class="nav-text">9.5 本地搜索</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-6-404页面"><span class="nav-text">9.6 404页面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-7-草稿"><span class="nav-text">9.7 草稿</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-增加评论功能"><span class="nav-text">10. 增加评论功能</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#10-1-LiveRe"><span class="nav-text">10.1 LiveRe</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-2-gitment"><span class="nav-text">10.2 gitment</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-3-gitalk"><span class="nav-text">10.3 gitalk</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#11-添加站点与文章访问计数"><span class="nav-text">11. 添加站点与文章访问计数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#12-隐藏版本信息"><span class="nav-text">12. 隐藏版本信息</span></a></li></ol></li></ol></div>
-            
-
-          </div>
-        </div>
-      <!--/noindex-->
-      
-
-      
+      </div>
 
     </div>
   </aside>
-  
+  <div id="sidebar-dimmer"></div>
 
 
-        
       </div>
     </main>
 
-    <footer id="footer" class="footer">
+    <footer class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
-  <span class="with-love" id="animate">
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">jackkke</span>
-
-  
-
-  
 </div>
-
-
-
-
-
-
-
-
 
         
 <div class="busuanzi-count">
   <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
-  
-    <span class="post-meta-item-icon">
-      <i class="fa fa-user"> 总访客量</i>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
     </span>
-    <span class="site-uv" title="总访客量">
-      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
-    </span>
-  
-
-  
     <span class="post-meta-divider">|</span>
-  
-
-  
-    <span class="post-meta-item-icon">
-      <i class="fa fa-eye"> 总访问量</i>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
     </span>
-    <span class="site-pv" title="总访问量">
-      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
-    </span>
-  
 </div>
+
+
+
 
 
 
@@ -860,41 +540,24 @@
         
       </div>
     </footer>
-
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
-    
-
-    
-
-    
-
-    
   </div>
 
   
-
-<script>
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
-</script>
-
-
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+<script src="/js/schemes/pisces.js"></script>
+<script src="/js/next-boot.js"></script>
 
 
 
-
+  
 
 
 
 
-
-
-
+  <script src="/js/local-search.js"></script>
 
 
 
@@ -909,438 +572,26 @@
 
 
   
-  <script src="/lib/jquery/index.js?v=2.1.3"></script>
 
   
-  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-
-  
-
-
-  <script src="/js/utils.js?v=7.1.0"></script>
-
-  <script src="/js/motion.js?v=7.1.0"></script>
-
-
-
-  
-  
-
-
-  <script src="/js/schemes/muse.js?v=7.1.0"></script>
-
-
-
-
-  
-  <script src="/js/scrollspy.js?v=7.1.0"></script>
-<script src="/js/post-details.js?v=7.1.0"></script>
-
-
-
-  
-
-
-  <script src="/js/next-boot.js?v=7.1.0"></script>
-
-
-  
-
-  
-
-  
-
-  
-
-
-  
-    
-
-<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
-
-
 
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
 
-
-
-<script src="//cdn.jsdelivr.net/npm/js-md5@0.7.3/src/md5.min.js"></script>
-
 <script>
-  var gitalk = new Gitalk({
-    clientID: 'a687777f02ec551a31dc',
-    clientSecret: '9527bc4b4ffd82f68ac93429319d689d62003a32',
-    repo: 'gitPagesTalk',
-    owner: 'jackkke',
-    admin: ['jackkke'],
-    id: md5(location.pathname),
-    
-      language: window.navigator.language || window.navigator.userLanguage,
-    
-    distractionFreeMode: 'true'
-  });
-  gitalk.render('gitalk-container');
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID: 'a687777f02ec551a31dc',
+      clientSecret: '9527bc4b4ffd82f68ac93429319d689d62003a32',
+      repo: 'gitPagesTalk',
+      owner: 'jackkke',
+      admin: ['jackkke'],
+      id: 'f53e1d521b0754cef1b372dbfeaf3a62',
+        language: 'zh-CN',
+      distractionFreeMode: 'true'
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
 </script>
-
-  
-
-
-  
-  <script>
-    // Popup Window;
-    var isfetched = false;
-    var isXml = true;
-    // Search DB path;
-    var search_path = "";
-    if (search_path.length === 0) {
-      search_path = "search.xml";
-    } else if (/json$/i.test(search_path)) {
-      isXml = false;
-    }
-    var path = "/" + search_path;
-    // monitor main search box;
-
-    var onPopupClose = function (e) {
-      $('.popup').hide();
-      $('#local-search-input').val('');
-      $('.search-result-list').remove();
-      $('#no-result').remove();
-      $(".local-search-pop-overlay").remove();
-      $('body').css('overflow', '');
-    }
-
-    function proceedsearch() {
-      $("body")
-        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
-        .css('overflow', 'hidden');
-      $('.search-popup-overlay').click(onPopupClose);
-      $('.popup').toggle();
-      var $localSearchInput = $('#local-search-input');
-      $localSearchInput.attr("autocapitalize", "none");
-      $localSearchInput.attr("autocorrect", "off");
-      $localSearchInput.focus();
-    }
-
-    // search function;
-    var searchFunc = function(path, search_id, content_id) {
-      'use strict';
-
-      // start loading animation
-      $("body")
-        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
-          '<div id="search-loading-icon">' +
-          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
-          '</div>' +
-          '</div>')
-        .css('overflow', 'hidden');
-      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
-
-      
-
-      $.ajax({
-        url: path,
-        dataType: isXml ? "xml" : "json",
-        async: true,
-        success: function(res) {
-          // get the contents from search data
-          isfetched = true;
-          $('.popup').detach().appendTo('.header-inner');
-          var datas = isXml ? $("entry", res).map(function() {
-            return {
-              title: $("title", this).text(),
-              content: $("content",this).text(),
-              url: $("url" , this).text()
-            };
-          }).get() : res;
-          var input = document.getElementById(search_id);
-          var resultContent = document.getElementById(content_id);
-          var inputEventFunction = function() {
-            var searchText = input.value.trim().toLowerCase();
-            var keywords = searchText.split(/[\s\-]+/);
-            if (keywords.length > 1) {
-              keywords.push(searchText);
-            }
-            var resultItems = [];
-            if (searchText.length > 0) {
-              // perform local searching
-              datas.forEach(function(data) {
-                var isMatch = false;
-                var hitCount = 0;
-                var searchTextCount = 0;
-                var title = data.title.trim();
-                var titleInLowerCase = title.toLowerCase();
-                var content = data.content.trim().replace(/<[^>]+>/g,"");
-                
-                var contentInLowerCase = content.toLowerCase();
-                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
-                var indexOfTitle = [];
-                var indexOfContent = [];
-                // only match articles with not empty titles
-                if(title != '') {
-                  keywords.forEach(function(keyword) {
-                    function getIndexByWord(word, text, caseSensitive) {
-                      var wordLen = word.length;
-                      if (wordLen === 0) {
-                        return [];
-                      }
-                      var startPosition = 0, position = [], index = [];
-                      if (!caseSensitive) {
-                        text = text.toLowerCase();
-                        word = word.toLowerCase();
-                      }
-                      while ((position = text.indexOf(word, startPosition)) > -1) {
-                        index.push({position: position, word: word});
-                        startPosition = position + wordLen;
-                      }
-                      return index;
-                    }
-
-                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
-                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
-                  });
-                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
-                    isMatch = true;
-                    hitCount = indexOfTitle.length + indexOfContent.length;
-                  }
-                }
-
-                // show search results
-
-                if (isMatch) {
-                  // sort index by position of keyword
-
-                  [indexOfTitle, indexOfContent].forEach(function (index) {
-                    index.sort(function (itemLeft, itemRight) {
-                      if (itemRight.position !== itemLeft.position) {
-                        return itemRight.position - itemLeft.position;
-                      } else {
-                        return itemLeft.word.length - itemRight.word.length;
-                      }
-                    });
-                  });
-
-                  // merge hits into slices
-
-                  function mergeIntoSlice(text, start, end, index) {
-                    var item = index[index.length - 1];
-                    var position = item.position;
-                    var word = item.word;
-                    var hits = [];
-                    var searchTextCountInSlice = 0;
-                    while (position + word.length <= end && index.length != 0) {
-                      if (word === searchText) {
-                        searchTextCountInSlice++;
-                      }
-                      hits.push({position: position, length: word.length});
-                      var wordEnd = position + word.length;
-
-                      // move to next position of hit
-
-                      index.pop();
-                      while (index.length != 0) {
-                        item = index[index.length - 1];
-                        position = item.position;
-                        word = item.word;
-                        if (wordEnd > position) {
-                          index.pop();
-                        } else {
-                          break;
-                        }
-                      }
-                    }
-                    searchTextCount += searchTextCountInSlice;
-                    return {
-                      hits: hits,
-                      start: start,
-                      end: end,
-                      searchTextCount: searchTextCountInSlice
-                    };
-                  }
-
-                  var slicesOfTitle = [];
-                  if (indexOfTitle.length != 0) {
-                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
-                  }
-
-                  var slicesOfContent = [];
-                  while (indexOfContent.length != 0) {
-                    var item = indexOfContent[indexOfContent.length - 1];
-                    var position = item.position;
-                    var word = item.word;
-                    // cut out 100 characters
-                    var start = position - 20;
-                    var end = position + 80;
-                    if(start < 0){
-                      start = 0;
-                    }
-                    if (end < position + word.length) {
-                      end = position + word.length;
-                    }
-                    if(end > content.length){
-                      end = content.length;
-                    }
-                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
-                  }
-
-                  // sort slices in content by search text's count and hits' count
-
-                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
-                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
-                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
-                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
-                      return sliceRight.hits.length - sliceLeft.hits.length;
-                    } else {
-                      return sliceLeft.start - sliceRight.start;
-                    }
-                  });
-
-                  // select top N slices in content
-
-                  var upperBound = parseInt('1');
-                  if (upperBound >= 0) {
-                    slicesOfContent = slicesOfContent.slice(0, upperBound);
-                  }
-
-                  // highlight title and content
-
-                  function highlightKeyword(text, slice) {
-                    var result = '';
-                    var prevEnd = slice.start;
-                    slice.hits.forEach(function (hit) {
-                      result += text.substring(prevEnd, hit.position);
-                      var end = hit.position + hit.length;
-                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
-                      prevEnd = end;
-                    });
-                    result += text.substring(prevEnd, slice.end);
-                    return result;
-                  }
-
-                  var resultItem = '';
-
-                  if (slicesOfTitle.length != 0) {
-                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
-                  } else {
-                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
-                  }
-
-                  slicesOfContent.forEach(function (slice) {
-                    resultItem += "<a href='" + articleUrl + "'>" +
-                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
-                      "...</p>" + "</a>";
-                  });
-
-                  resultItem += "</li>";
-                  resultItems.push({
-                    item: resultItem,
-                    searchTextCount: searchTextCount,
-                    hitCount: hitCount,
-                    id: resultItems.length
-                  });
-                }
-              })
-            };
-            if (keywords.length === 1 && keywords[0] === "") {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
-            } else if (resultItems.length === 0) {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
-            } else {
-              resultItems.sort(function (resultLeft, resultRight) {
-                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
-                  return resultRight.searchTextCount - resultLeft.searchTextCount;
-                } else if (resultLeft.hitCount !== resultRight.hitCount) {
-                  return resultRight.hitCount - resultLeft.hitCount;
-                } else {
-                  return resultRight.id - resultLeft.id;
-                }
-              });
-              var searchResultList = '<ul class=\"search-result-list\">';
-              resultItems.forEach(function (result) {
-                searchResultList += result.item;
-              })
-              searchResultList += "</ul>";
-              resultContent.innerHTML = searchResultList;
-            }
-          }
-
-          if ('auto' === 'auto') {
-            input.addEventListener('input', inputEventFunction);
-          } else {
-            $('.search-icon').click(inputEventFunction);
-            input.addEventListener('keypress', function (event) {
-              if (event.keyCode === 13) {
-                inputEventFunction();
-              }
-            });
-          }
-
-          // remove loading animation
-          $(".local-search-pop-overlay").remove();
-          $('body').css('overflow', '');
-
-          proceedsearch();
-        }
-      });
-    }
-
-    // handle and trigger popup window;
-    $('.popup-trigger').click(function(e) {
-      e.stopPropagation();
-      if (isfetched === false) {
-        searchFunc(path, 'local-search-input', 'local-search-result');
-      } else {
-        proceedsearch();
-      };
-    });
-
-    $('.popup-btn-close').click(onPopupClose);
-    $('.popup').click(function(e){
-      e.stopPropagation();
-    });
-    $(document).on('keyup', function (event) {
-      var shouldDismissSearchPopup = event.which === 27 &&
-        $('.search-popup').is(':visible');
-      if (shouldDismissSearchPopup) {
-        onPopupClose();
-      }
-    });
-  </script>
-
-
-
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
 
 </body>
 </html>

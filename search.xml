@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>MAC 虚拟机</title>
+    <url>/2019/09/06/MAC%20%E8%99%9A%E6%8B%9F%E6%9C%BAwindows%E5%A4%87%E7%94%A8%E7%B3%BB%E7%BB%9F%E6%9C%80%E4%BD%B3%E9%80%89%E6%8B%A9%20Windows%20Thin/</url>
+    <content><![CDATA[<h1 id="MAC-虚拟机windows备用系统最佳选择-Windows-Thin"><a href="#MAC-虚拟机windows备用系统最佳选择-Windows-Thin" class="headerlink" title="MAC 虚拟机windows备用系统最佳选择 Windows Thin"></a>MAC 虚拟机windows备用系统最佳选择 Windows Thin</h1><h2 id="1-下载"><a href="#1-下载" class="headerlink" title="1. 下载"></a>1. 下载</h2><p>下载地址：</p><figure class="highlight html"><table><tr><td class="code"><pre><span class="line">ed2k://|file|en_windows_thin_pc_x86_697681.iso|1576980480|2D0E6A048EB3F314F556B4F0834A95E2|/</span><br><span class="line">来源：http://msdn.itellyou.cn/</span><br></pre></td></tr></table></figure><a id="more"></a>
+
+
+
+
+<h2 id="2-汉化"><a href="#2-汉化" class="headerlink" title="2. 汉化"></a>2. 汉化</h2><p>下载地址</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">http://download.microsoft.com/download/8/6/1/8616D57C-1163-45FB-832A-15FA60571002/SP1/Chinese (Simplified) Language Pack - Windows Embedded Standard 7 SP1/lp.cab</span><br></pre></td></tr></table></figure>
+
+<p>汉化步骤</p>
+<ul>
+<li>下载Windows Thin PC 简体中文语言包lp.cab放到C盘的根目录</li>
+<li>以管理员身份运行CMD命令输入：dism /online /add-package /packagepath:C:\lp.cab</li>
+<li>完成后输入：bcdedit /set {current} locale zh-cn</li>
+<li>完成后再输入：bcdboot %WinDir% /l zh-cn</li>
+<li>完成后重启计算机进入控制面板进行设置即可。</li>
+</ul>
+<h2 id="3-假激活"><a href="#3-假激活" class="headerlink" title="3. 假激活"></a>3. 假激活</h2><p>首先，进入控制面板，找到管理工具，随后进入系统服务控制台，找到软件保护服务-Software Protection，禁用并停止此服务。下一步，进入 <code>C:\Windows\System32</code> 系统目录，找到 <code>slui.exe</code> 这个可执行文件。它负责记录和变更系统的激活状态。我们要做的事情就是把这个文件干掉，对该文件获取权限进行删除，也可以选择下载火绒来强制删除。</p>
+]]></content>
+      <tags>
+        <tag>mac</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>mac开启任何来源</title>
+    <url>/2019/09/06/mac%E5%BC%80%E5%90%AF%E4%BB%BB%E4%BD%95%E6%9D%A5%E6%BA%90/</url>
+    <content><![CDATA[<h1 id="mac开启任何来源"><a href="#mac开启任何来源" class="headerlink" title="mac开启任何来源"></a>mac开启任何来源</h1><p>Mac在macOS Sierra系统下，系统偏好设置中的“安全与隐私”默认已经去除了允许“任何来源”App的选项，如果不开启会直接影响到无法运行一些第三方应用。</p><a id="more"></a>
+<h2 id="sudo-spctl-–master-disable"><a href="#sudo-spctl-–master-disable" class="headerlink" title="sudo spctl –master-disable"></a>sudo spctl –master-disable</h2>]]></content>
+      <tags>
+        <tag>mac</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>v2ray</title>
+    <url>/2019/09/06/V2ray/</url>
+    <content><![CDATA[<h1 id="V2ray"><a href="#V2ray" class="headerlink" title="V2ray"></a>V2ray</h1><h2 id="获取安装包"><a href="#获取安装包" class="headerlink" title="获取安装包"></a>获取安装包</h2><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">wget https://install.direct/go.sh</span><br></pre></td></tr></table></figure><h2 id="执行安装命令"><a href="#执行安装命令" class="headerlink" title="执行安装命令"></a>执行安装命令</h2><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">sudo bash go.sh</span><br></pre></td></tr></table></figure><a id="more"></a>
+
+
+
+<h2 id="相关命令"><a href="#相关命令" class="headerlink" title="相关命令"></a>相关命令</h2><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="comment">## 启动</span></span><br><span class="line">sudo systemctl start v2ray</span><br><span class="line"></span><br><span class="line"><span class="comment">## 停止</span></span><br><span class="line">sudo systemctl stop v2ray</span><br><span class="line"></span><br><span class="line"><span class="comment">## 重启</span></span><br><span class="line">sudo systemctl restart v2ray</span><br><span class="line"></span><br><span class="line"><span class="comment">## 状态</span></span><br><span class="line">service v2ray status</span><br></pre></td></tr></table></figure>
+
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>配置路径：/etc/v2ray/config.json</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 查看配置</span></span><br><span class="line">cat /etc/v2ray/config.json</span><br><span class="line"><span class="comment"># 修改配置</span></span><br><span class="line">vi /etc/v2ray/config.json</span><br></pre></td></tr></table></figure>
+
+<h3 id="BBR加速"><a href="#BBR加速" class="headerlink" title="BBR加速"></a>BBR加速</h3><p>内核需要在4.10之上，而我用的是centos8，满足条件<br>修改/etc/sysctl.conf文件</p>
+<figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 增加下面两行代码</span></span><br><span class="line"><span class="meta">net.core.default_qdisc</span>=<span class="string">fq</span></span><br><span class="line"><span class="meta">net.ipv4.tcp_congestion_control</span>=<span class="string">bbr</span></span><br></pre></td></tr></table></figure>
+
+<p>验证：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="comment"># sysctl net.ipv4.tcp_available_congestion_control</span></span><br><span class="line">net.ipv4.tcp_available_congestion_control = bbr cubic reno</span><br><span class="line"><span class="comment"># lsmod | grep bbr</span></span><br><span class="line">  tcp_bbr                16384  3</span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>工具</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>spring boot 上传文件大小限制</title>
+    <url>/2019/09/06/spring%20boot%20%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6%E5%A4%A7%E5%B0%8F%E9%99%90%E5%88%B6/</url>
+    <content><![CDATA[<h1 id="spring-boot-上传文件大小限制"><a href="#spring-boot-上传文件大小限制" class="headerlink" title="spring boot 上传文件大小限制"></a>spring boot 上传文件大小限制</h1><h3 id="Spring-Boot-1-3-x"><a href="#Spring-Boot-1-3-x" class="headerlink" title="Spring Boot 1.3.x"></a>Spring Boot 1.3.x</h3><ul>
+<li><code>multipart.maxFileSize</code></li>
+<li><code>multipart.maxRequestSize</code></li>
+</ul><a id="more"></a>
+<h3 id="Spring-Boot-1-4-x-and-1-5-x"><a href="#Spring-Boot-1-4-x-and-1-5-x" class="headerlink" title="Spring Boot 1.4.x and 1.5.x"></a>Spring Boot 1.4.x and 1.5.x</h3><ul>
+<li><code>spring.http.multipart.maxFileSize</code></li>
+<li><code>spring.http.multipart.maxRequestSize</code></li>
+</ul>
+<h3 id="Spring-Boot-2-x"><a href="#Spring-Boot-2-x" class="headerlink" title="Spring Boot 2.x"></a>Spring Boot 2.x</h3><ul>
+<li><code>spring.servlet.multipart.maxFileSize</code></li>
+<li><code>spring.servlet.multipart.maxRequestSize</code></li>
+</ul>
+<p>下面是2.x的示例</p>
+<figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Single file max size</span></span><br><span class="line"><span class="meta">spring</span>:<span class="string"></span></span><br><span class="line">  <span class="meta">servlet</span>:<span class="string"></span></span><br><span class="line">    <span class="attr">multipart</span>:<span class="string"></span></span><br><span class="line">      <span class="meta">max-file-size</span>: <span class="string">10MB</span></span><br><span class="line">      <span class="meta">max-request-size</span>: <span class="string">100MB</span></span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>spring boot</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Mysql常用函数</title>
+    <url>/2019/05/09/Mysql%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0/</url>
+    <content><![CDATA[<h2 id="1-SQL-Aggregate-函数"><a href="#1-SQL-Aggregate-函数" class="headerlink" title="1. SQL Aggregate 函数"></a>1. SQL Aggregate 函数</h2><ul>
+<li>AVG() - 返回平均值</li>
+<li>COUNT() - 返回行数</li>
+<li>FIRST() - 返回第一个记录的值</li>
+<li>LAST() - 返回最后一个记录的值</li>
+<li>MAX() - 返回最大值</li>
+<li>MIN() - 返回最小值</li>
+<li>SUM() - 返回总和</li>
+</ul><a id="more"></a>
+<h2 id="2-SQL-Scalar-函数"><a href="#2-SQL-Scalar-函数" class="headerlink" title="2. SQL Scalar 函数"></a>2. SQL Scalar 函数</h2><h3 id="2-1-UCASE-将某个字段转换为大写"><a href="#2-1-UCASE-将某个字段转换为大写" class="headerlink" title="2.1 UCASE() - 将某个字段转换为大写"></a>2.1 UCASE() - 将某个字段转换为大写</h3><ul>
+<li>LCASE() - 将某个字段转换为小写</li>
+<li>MID() - 从某个文本字段提取字符，MySql 中使用</li>
+<li>SubString(字段，1，end) - 从某个文本字段提取字符</li>
+</ul>
+<h3 id="2-5-LEN-返回某个文本字段的长度"><a href="#2-5-LEN-返回某个文本字段的长度" class="headerlink" title="2.5 LEN() - 返回某个文本字段的长度"></a>2.5 LEN() - 返回某个文本字段的长度</h3><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">LEN</span>(<span class="string">'test_len'</span>) <span class="keyword">FROM</span> table_name;</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-6-ROUND-对某个数值字段进行指定小数位数的四舍五入"><a href="#2-6-ROUND-对某个数值字段进行指定小数位数的四舍五入" class="headerlink" title="2.6 ROUND() - 对某个数值字段进行指定小数位数的四舍五入"></a>2.6 ROUND() - 对某个数值字段进行指定小数位数的四舍五入</h3><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="keyword">ROUND</span>(<span class="number">1.49</span>);</span><br><span class="line"><span class="keyword">select</span> <span class="keyword">ROUND</span>(<span class="number">1.55</span>);</span><br></pre></td></tr></table></figure>
+
+<p>输入结果:</p>
+<blockquote>
+<p>1<br>2</p>
+</blockquote>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="keyword">ROUND</span>(<span class="number">1.49</span>, <span class="number">0</span>);</span><br><span class="line"><span class="keyword">select</span> <span class="keyword">ROUND</span>(<span class="number">1.49</span>, <span class="number">1</span>);</span><br><span class="line"><span class="keyword">select</span> <span class="keyword">ROUND</span>(<span class="number">1.55</span>, <span class="number">0</span>);</span><br><span class="line"><span class="keyword">select</span> <span class="keyword">ROUND</span>(<span class="number">1.55</span>, <span class="number">1</span>);</span><br></pre></td></tr></table></figure>
+
+<p>输入结果:</p>
+<blockquote>
+<p>1<br>1.5<br>2<br>1.6</p>
+</blockquote>
+<h3 id="2-7-NOW-返回当前的系统日期和时间"><a href="#2-7-NOW-返回当前的系统日期和时间" class="headerlink" title="2.7 NOW() - 返回当前的系统日期和时间"></a>2.7 NOW() - 返回当前的系统日期和时间</h3><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">NOW</span>() <span class="keyword">FROM</span> <span class="keyword">TABLE</span>;</span><br></pre></td></tr></table></figure>
+
+<p>输入结果:</p>
+<blockquote>
+<p>2019-05-09 15:37:13</p>
+</blockquote>
+<h3 id="2-8-FORMAT-格式化某个字段的显示方式"><a href="#2-8-FORMAT-格式化某个字段的显示方式" class="headerlink" title="2.8 FORMAT() - 格式化某个字段的显示方式"></a>2.8 FORMAT() - 格式化某个字段的显示方式</h3><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">FORMAT</span>(<span class="number">1000000</span>,<span class="number">2</span>) <span class="keyword">FROM</span> <span class="keyword">TABLE</span>;</span><br><span class="line"><span class="keyword">SELECT</span> <span class="keyword">FORMAT</span>(<span class="number">1000000.11111</span>,<span class="number">2</span>) <span class="keyword">FROM</span> <span class="keyword">TABLE</span>;</span><br><span class="line"><span class="keyword">select</span> <span class="keyword">format</span>(<span class="number">1000000.11111</span>,<span class="number">0</span>) <span class="keyword">FROM</span> <span class="keyword">TABLE</span>;</span><br><span class="line"><span class="keyword">SELECT</span> <span class="keyword">FORMAT</span>(<span class="number">100000.55555</span>,<span class="number">2</span>) <span class="keyword">FROM</span> <span class="keyword">TABLE</span>;</span><br><span class="line"><span class="keyword">SELECT</span> <span class="keyword">FORMAT</span>(<span class="number">100000.55555</span>,<span class="number">0</span>) <span class="keyword">FROM</span> <span class="keyword">TABLE</span>;</span><br></pre></td></tr></table></figure>
+
+<p>输入结果，格式为###,###,###.###，并且保留小数方式为四舍五入</p>
+<blockquote>
+<p>10,000.00<br>1,000,000.11<br>1,000,000<br>100,000.56<br>100,001</p>
+</blockquote>
+]]></content>
+  </entry>
+  <entry>
+    <title>BigDecimal常用方法</title>
+    <url>/2019/05/07/BigDecimal%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>JavaScript循环</title>
+    <url>/2019/04/29/JavaScript%E5%BE%AA%E7%8E%AF/</url>
+    <content><![CDATA[<h2 id="1-JavaScript-数组循环"><a href="#1-JavaScript-数组循环" class="headerlink" title="1. JavaScript 数组循环"></a>1. JavaScript 数组循环</h2><h3 id="1-1-一般的for循环"><a href="#1-1-一般的for循环" class="headerlink" title="1.1. 一般的for循环"></a>1.1. 一般的for循环</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> array = [<span class="string">"第一个"</span>, <span class="string">"第二个"</span>, <span class="string">"第三个"</span>];</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> index = <span class="number">0</span>; index &lt; array.length; index++) &#123;</span><br><span class="line">    <span class="keyword">const</span> element = array[index];</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"For Loop"</span> + element)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><a id="more"></a>
+
+<p>执行结果为：</p>
+<blockquote>
+<p>For Loop第一个<br>For Loop第二个<br>For Loop第三个</p>
+</blockquote>
+<h3 id="1-2-for…in-遍历"><a href="#1-2-for…in-遍历" class="headerlink" title="1.2. for…in 遍历"></a>1.2. for…in 遍历</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> array = [<span class="string">"第一个"</span>, <span class="string">"第二个"</span>, <span class="string">"第三个"</span>];</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">const</span> key <span class="keyword">in</span> array) &#123;</span><br><span class="line">    <span class="comment">// key 为索引</span></span><br><span class="line">    <span class="keyword">const</span> element = array[key];</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"For-In Loop"</span> + element);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>执行结果为：</p>
+<blockquote>
+<p>For-In Loop第一个<br>For-In Loop第二个<br>For-In Loop第三个</p>
+</blockquote>
+<h3 id="1-3-for…of-遍历"><a href="#1-3-for…of-遍历" class="headerlink" title="1.3. for…of 遍历"></a>1.3. for…of 遍历</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> array = [<span class="string">"第一个"</span>, <span class="string">"第二个"</span>, <span class="string">"第三个"</span>];</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">const</span> iterator <span class="keyword">of</span> array) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"For-of Loop"</span> + iterator)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>执行结果为：</p>
+<blockquote>
+<p>For-of Loop第一个<br>For-of Loop第二个<br>For-of Loop第三个</p>
+</blockquote>
+<h3 id="1-4-forEach-遍历"><a href="#1-4-forEach-遍历" class="headerlink" title="1.4. forEach 遍历"></a>1.4. forEach 遍历</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> array = [<span class="string">"第一个"</span>, <span class="string">"第二个"</span>, <span class="string">"第三个"</span>];</span><br><span class="line">array.forEach(<span class="function"><span class="params">element</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"ForEach Loop"</span> + element)</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>执行结果为：</p>
+<blockquote>
+<p>ForEach Loop第一个<br>ForEach Loop第二个<br>ForEach Loop第三个</p>
+</blockquote>
+<h2 id="2-JavaScript-对象属性循环"><a href="#2-JavaScript-对象属性循环" class="headerlink" title="2. JavaScript 对象属性循环"></a>2. JavaScript 对象属性循环</h2><h3 id="2-1-for…in-遍历"><a href="#2-1-for…in-遍历" class="headerlink" title="2.1. for…in 遍历"></a>2.1. for…in 遍历</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;&#125;;</span><br><span class="line">obj.id = <span class="string">"id"</span>;</span><br><span class="line">obj.name = <span class="string">"name"</span>;</span><br><span class="line">obj.code = <span class="string">"code"</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">const</span> key <span class="keyword">in</span> obj) &#123;</span><br><span class="line">    <span class="keyword">if</span> (obj.hasOwnProperty(key)) &#123;</span><br><span class="line">        <span class="keyword">const</span> element = obj[key];</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"key: "</span> + key + <span class="string">", value: "</span> + element);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>执行结果为：</p>
+<blockquote>
+<p>key: id, value: id<br>key: name, value: name<br>key: code, value: code</p>
+</blockquote>
+<h3 id="2-2-通过Object-keys生成数组"><a href="#2-2-通过Object-keys生成数组" class="headerlink" title="2.2. 通过Object.keys生成数组"></a>2.2. 通过Object.keys生成数组</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="built_in">console</span>.log();</span><br></pre></td></tr></table></figure>
+
+<p>执行结果为：</p>
+<blockquote>
+<p>[“id”, “name”, “code”]</p>
+</blockquote>
+<p>现在有了对象的所有key，亦可通过上面的数组循环的方式来循环获取对象属性</p>
+]]></content>
+      <tags>
+        <tag>js</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Markdown 首行缩进</title>
+    <url>/2019/04/29/Markdown%20%E9%A6%96%E8%A1%8C%E7%BC%A9%E8%BF%9B/</url>
+    <content><![CDATA[<h2 id="Markdown-首行缩进"><a href="#Markdown-首行缩进" class="headerlink" title="Markdown 首行缩进"></a>Markdown 首行缩进</h2><blockquote>
+<p>在中文书写时我们通常习惯段首缩进两个字，但是使用markdown编辑时我们手打空格缩进是不起效果的，因此我们需要通过使用HTML中的空格实体来帮助我们实现缩进效果。</p>
+</blockquote><a id="more"></a>
+<h3 id="markdowm首行缩进方法-有如下几种方法："><a href="#markdowm首行缩进方法-有如下几种方法：" class="headerlink" title="markdowm首行缩进方法,有如下几种方法："></a>markdowm首行缩进方法,有如下几种方法：</h3><blockquote>
+<p>一个汉字占两个空格大小，所以使用四个空格就可以达到首行缩进两个汉字的效果。</p>
+</blockquote>
+<ul>
+<li>一个空格大小的表示：<strong><code>&amp;ensp;</code></strong> 或 <strong><code>&amp;#8194;</code></strong> ，此时只要在相应需要缩进的段落前加上 4个 如上的标记即可，注意要带上分号。</li>
+<li>两个空格的大小表示：<strong><code>&amp;emsp;</code></strong> 或 <strong><code>&amp;#8195;</code></strong> ，同理，使用2个即可缩进2个汉字，推荐使用该方式。</li>
+<li>不换行空格：<strong><code>&amp;nbsp;</code></strong> 或 <strong><code>&amp;#160;</code></strong> ，使用4个 <strong><code>&amp;#160;</code></strong> 即可。</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>hexo</tag>
+        <tag>markdown</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo 部署到github或gitee</title>
+    <url>/2019/04/23/Hexo%20%E9%83%A8%E7%BD%B2%E5%88%B0github%E6%88%96gitee/</url>
+    <content><![CDATA[<h2 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h2><h2 id="Hexo提供快速简便的部署策略，只需要一个命令即可将站点部署到服务器。"><a href="#Hexo提供快速简便的部署策略，只需要一个命令即可将站点部署到服务器。" class="headerlink" title="Hexo提供快速简便的部署策略，只需要一个命令即可将站点部署到服务器。"></a>Hexo提供快速简便的部署策略，只需要一个命令即可将站点部署到服务器。</h2><figure class="highlight py"><table><tr><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure><figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 也可以简写为</span></span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure><a id="more"></a>
+
+
+
+<h2 id="首先添加依赖hexo-deployer-git"><a href="#首先添加依赖hexo-deployer-git" class="headerlink" title="首先添加依赖hexo-deployer-git"></a>首先添加依赖hexo-deployer-git</h2><figure class="highlight py"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+
+<h2 id="部署之前修改项目根目录下的-config-yml"><a href="#部署之前修改项目根目录下的-config-yml" class="headerlink" title="部署之前修改项目根目录下的_config.yml"></a>部署之前修改项目根目录下的_config.yml</h2><figure class="highlight py"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https://github.com/jackkke/jackkke.github.io.git</span><br><span class="line">  branch: master</span><br><span class="line">  <span class="comment"># message：</span></span><br></pre></td></tr></table></figure>
+
+<p>可以同时部署到多个环境，Hexo将按顺序执行</p>
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">- type: git</span><br><span class="line">  repo: https://github.com/jackkke/jackkke.github.io.git</span><br><span class="line">  branch: master</span><br><span class="line">  <span class="comment"># message：</span></span><br><span class="line">- type: git</span><br><span class="line">  repo: https://gitee.com/jackkke/jackkke.git</span><br><span class="line">  branch: master</span><br><span class="line">  <span class="comment"># message：</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="参数介绍"><a href="#参数介绍" class="headerlink" title="参数介绍"></a>参数介绍</h2><figure class="highlight py"><table><tr><td class="code"><pre><span class="line">repo: GitHub / Bitbucket / Coding / GitLab / Gitee存储库URL</span><br><span class="line">branch: 分支名称</span><br><span class="line">message: 默认为Site updated: &#123;&#123; now(<span class="string">'YYYY-MM-DD HH:mm:ss'</span>) &#125;&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="建议部署方式"><a href="#建议部署方式" class="headerlink" title="建议部署方式"></a>建议部署方式</h2><figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 前者清除站点文件，后者重新生成站点文件并将之推送到指定的库分支。</span></span><br><span class="line">hexo clean &amp;&amp; hexo d</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>工具</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>优化NexT 6.0版本</title>
+    <url>/2019/04/17/%E4%BC%98%E5%8C%96NexT-6-0%E7%89%88%E6%9C%AC/</url>
+    <content><![CDATA[<h1 id="优化NexT-6-0，本文完全按照个人喜欢设置"><a href="#优化NexT-6-0，本文完全按照个人喜欢设置" class="headerlink" title="优化NexT 6.0，本文完全按照个人喜欢设置"></a>优化NexT 6.0，本文完全按照个人喜欢设置</h1><p>本文主要参考：<a href="https://www.jianshu.com/p/3a05351a37dc" target="_blank" rel="noopener">链接</a>，特别感谢</p><h2 id="1-Schemes主题选择"><a href="#1-Schemes主题选择" class="headerlink" title="1. Schemes主题选择"></a>1. Schemes主题选择</h2><p>以下配置均在NexT主题配置文件：<strong>themes/next/_config.yml</strong>中</p><a id="more"></a>
+
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Schemes</span></span><br><span class="line"><span class="comment"># scheme: Muse</span></span><br><span class="line"><span class="comment"># scheme: Mist</span></span><br><span class="line"><span class="comment"># scheme: Pisces</span></span><br><span class="line">scheme: Gemini</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-取消文章不自动折叠"><a href="#2-取消文章不自动折叠" class="headerlink" title="2. 取消文章不自动折叠"></a>2. 取消文章不自动折叠</h2><p>首页文章不显示全部，折叠起来，防止文章过长影响阅读</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line">auto_excerpt:</span><br><span class="line">  enable: <span class="keyword">true</span> <span class="comment">#此处改为true，意为自动折叠，length为折叠的长度</span></span><br><span class="line">  length: <span class="number">150</span></span><br></pre></td></tr></table></figure>
+
+<p>或者采取另一种方案，在文章中间插入一句，即可实现随意折叠，且优先级高于上面的方案，可以两者共同使用</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;!--more--&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-取消目录自动显示"><a href="#3-取消目录自动显示" class="headerlink" title="3. 取消目录自动显示"></a>3. 取消目录自动显示</h2><p>文章默认会展开右侧目录如果存在的话，我不太喜欢，隐藏掉</p>
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line">sidebar:</span><br><span class="line">  <span class="comment">#  - post    默认值，如果有目录自动展开，可隐藏</span></span><br><span class="line">  <span class="comment">#  - always  总是存在，不可隐藏</span></span><br><span class="line">  <span class="comment">#  - hide    默认隐藏，可以展开（采用这种）</span></span><br><span class="line">  <span class="comment">#  - remove  移除</span></span><br><span class="line">  display: hide</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-去掉文章目录标题的自动编号"><a href="#4-去掉文章目录标题的自动编号" class="headerlink" title="4. 去掉文章目录标题的自动编号"></a>4. 去掉文章目录标题的自动编号</h2><figure class="highlight py"><table><tr><td class="code"><pre><span class="line">toc:</span><br><span class="line">  enable: true</span><br><span class="line">  number: false <span class="comment"># 将此改为false即可</span></span><br><span class="line">  wrap: true <span class="comment"># 将此改为true每行目录超长自动换行</span></span><br><span class="line">  expand_all: false</span><br><span class="line">  max_depth: <span class="number">6</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="5-设置网站缩略图标"><a href="#5-设置网站缩略图标" class="headerlink" title="5. 设置网站缩略图标"></a>5. 设置网站缩略图标</h2><figure class="highlight py"><table><tr><td class="code"><pre><span class="line">favicon:</span><br><span class="line">  small: /images/jackkke.jpg</span><br><span class="line">  medium: /images/jackkke.jpg</span><br><span class="line">  apple_touch_icon: /images/jackkke.jpg</span><br><span class="line">  <span class="comment"># safari_pinned_tab: /images/logo.svg</span></span><br><span class="line">  <span class="comment">#android_manifest: /images/manifest.json</span></span><br><span class="line">  <span class="comment">#ms_browserconfig: /images/browserconfig.xml</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="6-设置头像"><a href="#6-设置头像" class="headerlink" title="6. 设置头像"></a>6. 设置头像</h2><figure class="highlight php"><table><tr><td class="code"><pre><span class="line">avatar:</span><br><span class="line">  url: /images/jackkke.jpg <span class="comment"># 需要把jackkke.jpg放到themes/next/source/images下</span></span><br><span class="line">  rounded: <span class="keyword">false</span></span><br><span class="line">  opacity: <span class="number">1</span></span><br><span class="line">  rotated: <span class="keyword">false</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="7-Github-follow-me-图标"><a href="#7-Github-follow-me-图标" class="headerlink" title="7. Github follow me 图标"></a>7. Github follow me 图标</h2><figure class="highlight php"><table><tr><td class="code"><pre><span class="line">github_banner:</span><br><span class="line">  enable: <span class="keyword">true</span> <span class="comment"># 将此改为true，即可显示在右上角</span></span><br><span class="line">  permalink: https:<span class="comment">//github.com/jackkke</span></span><br><span class="line">  title: Follow me on GitHub</span><br></pre></td></tr></table></figure>
+
+<h2 id="8-打赏功能"><a href="#8-打赏功能" class="headerlink" title="8. 打赏功能"></a>8. 打赏功能</h2><figure class="highlight py"><table><tr><td class="code"><pre><span class="line">reward_settings:</span><br><span class="line">  enable: true <span class="comment"># 将此改成true，即可出现打赏按钮</span></span><br><span class="line">  animation: false</span><br><span class="line">  comment: 坚持原创技术分享，您的支持将鼓励我继续创作！</span><br><span class="line">reward:</span><br><span class="line">  wechatpay: /images/wechatpay.jpg <span class="comment"># 此处去掉注释，并将你自己的收款码放到图片文件夹即可看到效果</span></span><br><span class="line">  <span class="comment"># alipay: /images/alipay.png</span></span><br><span class="line">  <span class="comment">#bitcoin: /images/bitcoin.png</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="9-丰富首页"><a href="#9-丰富首页" class="headerlink" title="9. 丰富首页"></a>9. 丰富首页</h2><h3 id="9-1-选择你需要的功能"><a href="#9-1-选择你需要的功能" class="headerlink" title="9.1 选择你需要的功能"></a>9.1 选择你需要的功能</h3><p>放开注释，该功能即可使用，键值对的值双竖线前面的代表功能名称，也就是访问路径，后面代表图标名称，默认即可</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: / || home                          //首页</span><br><span class="line">  archives: /archives/ || archive          //归档</span><br><span class="line">  categories: /categories/ || th           //分类</span><br><span class="line">  tags: /tags/ || tags                     //标签</span><br><span class="line">  about: /about/ || user                   //关于</span><br><span class="line">  <span class="comment"># schedule: /schedule/ || calendar        //日程表</span></span><br><span class="line">  <span class="comment"># sitemap: /sitemap.xml || sitemap        //站点地图</span></span><br><span class="line">  commonweal: /404/ || heartbeat          //公益404</span><br></pre></td></tr></table></figure>
+
+<h3 id="9-2-分类功能"><a href="#9-2-分类功能" class="headerlink" title="9.2 分类功能"></a>9.2 分类功能</h3><blockquote>
+<p>使用方法为在文章首title代码块处加上[categories: 分类名]即可</p>
+</blockquote>
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 控制台执行该命令（下同）</span></span><br><span class="line">hexo new page categories</span><br><span class="line">生成的页面中加上</span><br><span class="line">type: <span class="string">"categories"</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="9-3-标签功能"><a href="#9-3-标签功能" class="headerlink" title="9.3 标签功能"></a>9.3 标签功能</h3><blockquote>
+<p>使用方法为在文章首title代码块处加上[tags: 标签名]即可</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo new page tags</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 多tags也可以，方法为：</span><br><span class="line">tags:</span><br><span class="line">  - 标签1</span><br><span class="line">  - 标签2</span><br><span class="line">  ...</span><br></pre></td></tr></table></figure>
+
+<h3 id="9-4-关于页面"><a href="#9-4-关于页面" class="headerlink" title="9.4 关于页面"></a>9.4 关于页面</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo new page about</span><br></pre></td></tr></table></figure>
+
+<h3 id="9-5-本地搜索"><a href="#9-5-本地搜索" class="headerlink" title="9.5 本地搜索"></a>9.5 本地搜索</h3><figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 先执行，下面这行代码，增加依赖</span></span><br><span class="line">npm install hexo-generator-searchdb --save</span><br><span class="line"><span class="comment">#然后修改配置文件</span></span><br><span class="line">local_search:</span><br><span class="line">  enable: true <span class="comment"># 此处改为true，增加本地搜索功能</span></span><br><span class="line">  trigger: auto</span><br><span class="line">  top_n_per_article: <span class="number">1</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="9-6-404页面"><a href="#9-6-404页面" class="headerlink" title="9.6 404页面"></a>9.6 404页面</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo new page 404</span><br></pre></td></tr></table></figure>
+
+<p>在自动生成的页面后追加以下内容</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>早点回家<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"//qzonestyle.gtimg.cn/qzone/hybrid/app/404/search_children.js"</span> <span class="attr">homePageName</span>=<span class="string">"返回首页"</span> <span class="attr">homePageUrl</span>=<span class="string">"https://jackkke.github.io"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="9-7-草稿"><a href="#9-7-草稿" class="headerlink" title="9.7 草稿"></a>9.7 草稿</h3><figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 执行下面命令，生成名为“草稿.md”的草稿在/source/_drafts文件夹下</span></span><br><span class="line">hexo new draft <span class="string">"草稿"</span></span><br><span class="line"><span class="comment"># 执行下面命令，直接把草稿“草稿.md”发布，也可以手动把_drafts文件夹下的*.md文件移到_posts下</span></span><br><span class="line">hexo publish <span class="string">"草稿"</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 如果想在测试环境查看草稿，可以修改hexo配置文件</span></span><br><span class="line">render_drafts: true</span><br><span class="line"><span class="comment"># 或者使用以下启动命令来启动项目</span></span><br><span class="line">hexo server --drafts</span><br></pre></td></tr></table></figure>
+
+<h2 id="10-增加评论功能"><a href="#10-增加评论功能" class="headerlink" title="10. 增加评论功能"></a>10. 增加评论功能</h2><h3 id="10-1-LiveRe"><a href="#10-1-LiveRe" class="headerlink" title="10.1 LiveRe"></a>10.1 LiveRe</h3><p>我首先采用的是LiveRe，参考链接：<a href="https://blog.csdn.net/weixin_41196185/article/details/79178780" target="_blank" rel="noopener">点我达</a>，但这个评论系统初始化超级慢，被弃用</p>
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="comment"># LiveRe comments system</span></span><br><span class="line"><span class="comment"># You can get your uid from https://livere.com/insight/myCode (General web site)</span></span><br><span class="line">livere_uid: 注册成功登陆后找到data-uid，将其填到这个地方即可</span><br></pre></td></tr></table></figure>
+
+<h3 id="10-2-gitment"><a href="#10-2-gitment" class="headerlink" title="10.2 gitment"></a>10.2 gitment</h3><p>然后又发现了gitment，但他的问题比较多，比如issue名长度限制、第一次初始化也有很大问题，弄到一半弃用</p>
+<h3 id="10-3-gitalk"><a href="#10-3-gitalk" class="headerlink" title="10.3 gitalk"></a>10.3 gitalk</h3><p>最终采取的方案是gitalk，issue名限制问题也不存在。gitalk和gitment采取的解决方案相同，都是issue，这两个方案目前NexT都已经直接支持，需要先去注册一下OAuth<a href="https://github.com/settings/applications/new" target="_blank" rel="noopener">点我达</a>，记下Client ID和Client Secret。</p>
+<blockquote>
+<p>注意Authorization callback URL填自己的网站url： <a href="https://jackkke.github.io/">https://jackkke.github.io/</a></p>
+</blockquote>
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line">gitalk:</span><br><span class="line">  enable: true <span class="comment"># 这个地方改为true</span></span><br><span class="line">  github_id: 你的github名</span><br><span class="line">  repo: 专门存储评论系统的资源库，或者本项目资源库亦可</span><br><span class="line">  client_id: 你的oauth ID</span><br><span class="line">  client_secret: 你的oauth 密码</span><br><span class="line">  admin_user: 管理员的github name，可以是多个[<span class="string">'name1'</span>, <span class="string">'name2'</span>],必须要设置，需要管理员来初始化评论</span><br><span class="line">  distraction_free_mode: true </span><br><span class="line">  language:</span><br></pre></td></tr></table></figure>
+
+<h2 id="11-添加站点与文章访问计数"><a href="#11-添加站点与文章访问计数" class="headerlink" title="11. 添加站点与文章访问计数"></a>11. 添加站点与文章访问计数</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">busuanzi_count:</span><br><span class="line">  enable: true # 将此改为true，开放计数功能</span><br><span class="line">  total_visitors: true</span><br><span class="line">  total_visitors_icon: user</span><br><span class="line">  total_views: true</span><br><span class="line">  total_views_icon: eye</span><br><span class="line">  post_views: true</span><br><span class="line">  post_views_icon: eye</span><br></pre></td></tr></table></figure>
+
+<p>底部计数只有图标，没有文字，打开themes/next/layout/_third-party/analytics/busuanzi-counter.swig</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;i class=&quot;fa fa-&#123;&#123; theme.busuanzi_count.total_visitors_icon &#125;&#125;&quot;&gt;&lt;/i&gt;</span><br><span class="line"></span><br><span class="line"># 增加 &#123;&#123; __(&apos;footer.total_visitors&apos;) &#125;&#125;更改为</span><br><span class="line"></span><br><span class="line">&lt;i class=&quot;fa fa-&#123;&#123; theme.busuanzi_count.total_visitors_icon &#125;&#125;&quot;&gt; &#123;&#123; __(&apos;footer.total_visitors&apos;) &#125;&#125;&lt;/i&gt;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;i class=&quot;fa fa-&#123;&#123; theme.busuanzi_count.total_views_icon &#125;&#125;&quot;&gt;&lt;/i&gt;</span><br><span class="line"></span><br><span class="line"># 增加 &#123;&#123; __(&apos;footer.total_views&apos;) &#125;&#125;更改为</span><br><span class="line"></span><br><span class="line">&lt;i class=&quot;fa fa-&#123;&#123; theme.busuanzi_count.total_views_icon &#125;&#125;&quot;&gt; &#123;&#123; __(&apos;footer.total_views&apos;) &#125;&#125;&lt;/i&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="12-隐藏版本信息"><a href="#12-隐藏版本信息" class="headerlink" title="12. 隐藏版本信息"></a>12. 隐藏版本信息</h2><figure class="highlight py"><table><tr><td class="code"><pre><span class="line">powered:</span><br><span class="line">  enable: false <span class="comment"># 此处改为false，隐藏hexo信息</span></span><br><span class="line">  version: false <span class="comment"># 只将此处改为false，只隐藏版本信息</span></span><br><span class="line"></span><br><span class="line">theme:</span><br><span class="line">  enable: false <span class="comment"># 此处改为false，隐藏next scheme信息</span></span><br><span class="line">  version: false <span class="comment"># 只将此处改为false，只隐藏版本信息</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="post-edit"><a href="#post-edit" class="headerlink" title="post_edit"></a>post_edit</h2>]]></content>
+      <categories>
+        <category>工具</category>
+      </categories>
+      <tags>
+        <tag>工具</tag>
+        <tag>开端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo + GitHub Pages搭建博客</title>
+    <url>/2019/04/17/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</url>
+    <content><![CDATA[<h1 id="Hexo-GitHub-Pages搭建博客"><a href="#Hexo-GitHub-Pages搭建博客" class="headerlink" title="Hexo + GitHub Pages搭建博客"></a>Hexo + GitHub Pages搭建博客</h1><h2 id="基本要求"><a href="#基本要求" class="headerlink" title="基本要求"></a>基本要求</h2><ul>
+<li>注册GitHub账号，犹豫网络抽风，时不时会特别慢，推荐搭配梯子来注册（后续写篇文章）。</li>
+<li>电脑需要node环境，不懂node的可能额外需要一点时间（后续写篇文章）。</li>
+<li>编辑工具，推荐VSCode，搭配Markdown Preview Enhanced插件，可以实时预览。</li>
+</ul><a id="more"></a>
+<h2 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h2><ol>
+<li>注册GitHub账号，步骤省略，然后在上面新建一个资源库，这时需要注意的是资源库的名称一定为”username.github.io”，这样你的博客搭建好后，才可直接username.github.io来访问，例如<a href="https://jackkke.github.io">我的博客</a></li>
+</ol>
+]]></content>
+      <tags>
+        <tag>开端</tag>
+      </tags>
+  </entry>
+</search>
